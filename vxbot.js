@@ -34,6 +34,13 @@ client.on(Events.MessageCreate, (message) => {
         replyLinks.push(`https://www.instagramez.com/${instaMatch[1]}`);
     }
 
+    // Find all https://www.reddit.com/... links
+    const redditRegex = /https:\/\/www\.reddit\.com\/([^\s]+)/gi;
+    let redditMatch;
+    while ((redditMatch = redditRegex.exec(message.content)) !== null) {
+        replyLinks.push(`https://www.rxddit.com/${redditMatch[1]}`);
+    }
+
     // Send all links in one reply if any found
     if (replyLinks.length > 0) {
         message.suppressEmbeds();
