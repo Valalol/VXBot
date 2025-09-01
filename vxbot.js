@@ -36,6 +36,7 @@ client.on(Events.MessageCreate, (message) => {
 
     // Send all links in one reply if any found
     if (replyLinks.length > 0) {
+        message.suppressEmbeds();
         message.reply(replyLinks.join('\n'));
     }
 });
