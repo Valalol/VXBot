@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  vxbot:
+    build: .
+    # Use .env file if present, or allow environment variables to be set by Portainer stack
+    env_file:
+      - .env
+    environment:
+      - TOKEN
+    restart: unless-stopped
+    container_name: vxbot
+    # Uncomment if you want to see logs in the terminal
+    # tty: true
