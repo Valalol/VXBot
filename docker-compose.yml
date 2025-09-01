@@ -4,9 +4,7 @@ services:
     build: .
     # Use .env file if present, or allow environment variables to be set by Portainer stack
     env_file:
-      - .env
-    environment:
-      - TOKEN
+      - stack.env
     restart: unless-stopped
     container_name: vxbot
     # Uncomment if you want to see logs in the terminal
