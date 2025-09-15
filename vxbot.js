@@ -20,8 +20,8 @@ client.on(Events.MessageCreate, (message) => {
     // Collect all converted links
     const replyLinks = [];
 
-    // Find all https://x.com/... links
-    const xComRegex = /https:\/\/x\.com\/([^\s]+)/gi;
+    // Find all https://x.com/... or https://twitter.com/... links
+    const xComRegex = /https:\/\/(?:x|twitter)\.com\/([^\s]+)/gi;
     let xMatch;
     while ((xMatch = xComRegex.exec(message.content)) !== null) {
         replyLinks.push(`https://fixvx.com/${xMatch[1]}`);
