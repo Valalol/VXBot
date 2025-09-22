@@ -28,11 +28,11 @@ client.on(Events.MessageCreate, (message) => {
     }
 
     // Find all https://www.instagram.com/... links
-    const instaRegex = /https:\/\/www\.instagram\.com\/([^\s]+)/gi;
-    let instaMatch;
-    while ((instaMatch = instaRegex.exec(message.content)) !== null) {
-        replyLinks.push(`https://www.instagramez.com/${instaMatch[1]}`);
-    }
+    // const instaRegex = /https:\/\/www\.instagram\.com\/([^\s]+)/gi;
+    // let instaMatch;
+    // while ((instaMatch = instaRegex.exec(message.content)) !== null) {
+    //     replyLinks.push(`https://www.instagramez.com/${instaMatch[1]}`);
+    // }
 
     // Find all https://www.reddit.com/... links
     const redditRegex = /https:\/\/www\.reddit\.com\/([^\s]+)/gi;
